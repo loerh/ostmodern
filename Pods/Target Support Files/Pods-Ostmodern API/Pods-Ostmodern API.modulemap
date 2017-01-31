@@ -1,0 +1,6 @@
+framework module Pods_Ostmodern_API {
+  umbrella header "Pods-Ostmodern API-umbrella.h"
+
+  export *
+  module * { export * }
+}

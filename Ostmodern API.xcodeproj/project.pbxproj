@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5325B969A59FA9AF503141E0 /* Pods_Ostmodern_APITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B1EC09B32EC38179E10BAB /* Pods_Ostmodern_APITests.framework */; };
 		642B28981E4096C0005C800E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B28971E4096C0005C800E /* AppDelegate.swift */; };
-		642B289A1E4096C0005C800E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B28991E4096C0005C800E /* ViewController.swift */; };
+		642B289A1E4096C0005C800E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B28991E4096C0005C800E /* HomeViewController.swift */; };
 		642B289D1E4096C0005C800E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642B289B1E4096C0005C800E /* Main.storyboard */; };
 		642B28A01E4096C0005C800E /* Ostmodern_API.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 642B289E1E4096C0005C800E /* Ostmodern_API.xcdatamodeld */; };
 		642B28A21E4096C0005C800E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642B28A11E4096C0005C800E /* Assets.xcassets */; };
 		642B28A51E4096C0005C800E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642B28A31E4096C0005C800E /* LaunchScreen.storyboard */; };
 		642B28B01E4096C0005C800E /* Ostmodern_APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B28AF1E4096C0005C800E /* Ostmodern_APITests.swift */; };
+		642BC3A11E409D51004269A1 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642BC3A01E409D51004269A1 /* Episode.swift */; };
+		642BC3A31E40A379004269A1 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642BC3A21E40A379004269A1 /* ApiRequest.swift */; };
+		64E40E591E40EF6A0045E657 /* CellImageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E40E581E40EF6A0045E657 /* CellImageDelegate.swift */; };
+		64E40E5B1E40F70C0045E657 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E40E5A1E40F70C0045E657 /* EpisodeTableViewCell.swift */; };
+		7072FC5268EA2141C31B71C6 /* Pods_Ostmodern_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86EF480DC4C9125292C2AB69 /* Pods_Ostmodern_API.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,9 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042E2DC10805975F18491643 /* Pods-Ostmodern API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostmodern API.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ostmodern API/Pods-Ostmodern API.debug.xcconfig"; sourceTree = "<group>"; };
+		0C21C7D0359B65A64BFBDDA7 /* Pods-Ostmodern APITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostmodern APITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ostmodern APITests/Pods-Ostmodern APITests.debug.xcconfig"; sourceTree = "<group>"; };
+		244DBEACBC3EB49C6622A05A /* Pods-Ostmodern APITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostmodern APITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ostmodern APITests/Pods-Ostmodern APITests.release.xcconfig"; sourceTree = "<group>"; };
+		55B1EC09B32EC38179E10BAB /* Pods_Ostmodern_APITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ostmodern_APITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		642B28941E4096C0005C800E /* Ostmodern API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ostmodern API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		642B28971E4096C0005C800E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		642B28991E4096C0005C800E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		642B28991E4096C0005C800E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		642B289C1E4096C0005C800E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		642B289F1E4096C0005C800E /* Ostmodern_API.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ostmodern_API.xcdatamodel; sourceTree = "<group>"; };
 		642B28A11E4096C0005C800E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +48,12 @@
 		642B28AB1E4096C0005C800E /* Ostmodern APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ostmodern APITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		642B28AF1E4096C0005C800E /* Ostmodern_APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ostmodern_APITests.swift; sourceTree = "<group>"; };
 		642B28B11E4096C0005C800E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		642BC3A01E409D51004269A1 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		642BC3A21E40A379004269A1 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		64E40E581E40EF6A0045E657 /* CellImageDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellImageDelegate.swift; sourceTree = "<group>"; };
+		64E40E5A1E40F70C0045E657 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		86EF480DC4C9125292C2AB69 /* Pods_Ostmodern_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ostmodern_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDCE453639C4554A1220FB54 /* Pods-Ostmodern API.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostmodern API.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ostmodern API/Pods-Ostmodern API.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7072FC5268EA2141C31B71C6 /* Pods_Ostmodern_API.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +69,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5325B969A59FA9AF503141E0 /* Pods_Ostmodern_APITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19486F0C460092BDF614669D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				042E2DC10805975F18491643 /* Pods-Ostmodern API.debug.xcconfig */,
+				EDCE453639C4554A1220FB54 /* Pods-Ostmodern API.release.xcconfig */,
+				0C21C7D0359B65A64BFBDDA7 /* Pods-Ostmodern APITests.debug.xcconfig */,
+				244DBEACBC3EB49C6622A05A /* Pods-Ostmodern APITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		642B288B1E4096C0005C800E = {
 			isa = PBXGroup;
 			children = (
 				642B28961E4096C0005C800E /* Ostmodern API */,
 				642B28AE1E4096C0005C800E /* Ostmodern APITests */,
 				642B28951E4096C0005C800E /* Products */,
+				19486F0C460092BDF614669D /* Pods */,
+				A0AC1E509129BC4946F150B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,12 +111,16 @@
 			isa = PBXGroup;
 			children = (
 				642B28971E4096C0005C800E /* AppDelegate.swift */,
-				642B28991E4096C0005C800E /* ViewController.swift */,
+				642B28991E4096C0005C800E /* HomeViewController.swift */,
+				64E40E581E40EF6A0045E657 /* CellImageDelegate.swift */,
+				642BC3A01E409D51004269A1 /* Episode.swift */,
+				642BC3A21E40A379004269A1 /* ApiRequest.swift */,
 				642B289B1E4096C0005C800E /* Main.storyboard */,
 				642B28A11E4096C0005C800E /* Assets.xcassets */,
 				642B28A31E4096C0005C800E /* LaunchScreen.storyboard */,
 				642B28A61E4096C0005C800E /* Info.plist */,
 				642B289E1E4096C0005C800E /* Ostmodern_API.xcdatamodeld */,
+				64E40E5A1E40F70C0045E657 /* EpisodeTableViewCell.swift */,
 			);
 			path = "Ostmodern API";
 			sourceTree = "<group>";
@@ -99,6 +134,15 @@
 			path = "Ostmodern APITests";
 			sourceTree = "<group>";
 		};
+		A0AC1E509129BC4946F150B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86EF480DC4C9125292C2AB69 /* Pods_Ostmodern_API.framework */,
+				55B1EC09B32EC38179E10BAB /* Pods_Ostmodern_APITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 642B28B41E4096C0005C800E /* Build configuration list for PBXNativeTarget "Ostmodern API" */;
 			buildPhases = (
+				D6BF2AF9BE3BA6638EA99969 /* [CP] Check Pods Manifest.lock */,
 				642B28901E4096C0005C800E /* Sources */,
 				642B28911E4096C0005C800E /* Frameworks */,
 				642B28921E4096C0005C800E /* Resources */,
+				C9CB2CC30216A0B24B70982B /* [CP] Embed Pods Frameworks */,
+				85AC15041B453D33ECC0E4E5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,9 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 642B28B71E4096C0005C800E /* Build configuration list for PBXNativeTarget "Ostmodern APITests" */;
 			buildPhases = (
+				FC01FB790D29D711DA52DD78 /* [CP] Check Pods Manifest.lock */,
 				642B28A71E4096C0005C800E /* Sources */,
 				642B28A81E4096C0005C800E /* Frameworks */,
 				642B28A91E4096C0005C800E /* Resources */,
+				89AE7BC06A310EEE52DDCC35 /* [CP] Embed Pods Frameworks */,
+				F0BA32B39F79964D7C0D33A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,12 +249,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		85AC15041B453D33ECC0E4E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ostmodern API/Pods-Ostmodern API-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89AE7BC06A310EEE52DDCC35 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ostmodern APITests/Pods-Ostmodern APITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9CB2CC30216A0B24B70982B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ostmodern API/Pods-Ostmodern API-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6BF2AF9BE3BA6638EA99969 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0BA32B39F79964D7C0D33A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ostmodern APITests/Pods-Ostmodern APITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC01FB790D29D711DA52DD78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		642B28901E4096C0005C800E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				642B289A1E4096C0005C800E /* ViewController.swift in Sources */,
+				642B289A1E4096C0005C800E /* HomeViewController.swift in Sources */,
+				64E40E5B1E40F70C0045E657 /* EpisodeTableViewCell.swift in Sources */,
+				642BC3A11E409D51004269A1 /* Episode.swift in Sources */,
+				642BC3A31E40A379004269A1 /* ApiRequest.swift in Sources */,
+				64E40E591E40EF6A0045E657 /* CellImageDelegate.swift in Sources */,
 				642B28981E4096C0005C800E /* AppDelegate.swift in Sources */,
 				642B28A01E4096C0005C800E /* Ostmodern_API.xcdatamodeld in Sources */,
 			);
@@ -343,6 +490,7 @@
 		};
 		642B28B51E4096C0005C800E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 042E2DC10805975F18491643 /* Pods-Ostmodern API.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E7DGCG72AA;
@@ -356,6 +504,7 @@
 		};
 		642B28B61E4096C0005C800E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDCE453639C4554A1220FB54 /* Pods-Ostmodern API.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E7DGCG72AA;
@@ -369,6 +518,7 @@
 		};
 		642B28B81E4096C0005C800E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C21C7D0359B65A64BFBDDA7 /* Pods-Ostmodern APITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -384,6 +534,7 @@
 		};
 		642B28B91E4096C0005C800E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244DBEACBC3EB49C6622A05A /* Pods-Ostmodern APITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -416,6 +567,7 @@
 				642B28B61E4096C0005C800E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		642B28B71E4096C0005C800E /* Build configuration list for PBXNativeTarget "Ostmodern APITests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +576,7 @@
 				642B28B91E4096C0005C800E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
