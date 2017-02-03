@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol CellImageDelegate {
-    func didLoadCellImage(row: Int, episode : Episode)
+protocol EpisodeFavoriteDelegate {
+    func didUpdateFavorite()
 }

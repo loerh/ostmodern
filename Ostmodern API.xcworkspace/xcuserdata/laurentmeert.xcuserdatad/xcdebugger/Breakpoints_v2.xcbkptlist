@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ostmodern API/EpisodeTableViewCell.swift"
-            timestampString = "507575298.412682"
+            filePath = "Ostmodern API/ApiRequest.swift"
+            timestampString = "507632357.29215"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "updateFavorite()"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "homeSetDidFetch(fromJson:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ostmodern API/HomeViewController.swift"
-            timestampString = "507578884.38566"
+            filePath = "Ostmodern API/EpisodeTableViewCell.swift"
+            timestampString = "507744793.911427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "didLoadCellImage(row:episode:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "updateFavIcon()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

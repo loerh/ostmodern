@@ -16,9 +16,16 @@
 		642B28A51E4096C0005C800E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642B28A31E4096C0005C800E /* LaunchScreen.storyboard */; };
 		642B28B01E4096C0005C800E /* Ostmodern_APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B28AF1E4096C0005C800E /* Ostmodern_APITests.swift */; };
 		642BC3A11E409D51004269A1 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642BC3A01E409D51004269A1 /* Episode.swift */; };
-		642BC3A31E40A379004269A1 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642BC3A21E40A379004269A1 /* ApiRequest.swift */; };
+		642BC3A31E40A379004269A1 /* RequestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642BC3A21E40A379004269A1 /* RequestApi.swift */; };
+		64D4DBF31E447DED0098B9A7 /* BarButtonImageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D4DBF21E447DED0098B9A7 /* BarButtonImageDelegate.swift */; };
 		64E40E591E40EF6A0045E657 /* CellImageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E40E581E40EF6A0045E657 /* CellImageDelegate.swift */; };
 		64E40E5B1E40F70C0045E657 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E40E5A1E40F70C0045E657 /* EpisodeTableViewCell.swift */; };
+		64E40E5D1E41E04A0045E657 /* DatabaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E40E5C1E41E04A0045E657 /* DatabaseApi.swift */; };
+		64E40E5F1E41ECA60045E657 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E40E5E1E41ECA60045E657 /* Reachability.swift */; };
+		64E40E611E41ECB00045E657 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E40E601E41ECB00045E657 /* Alert.swift */; };
+		64E40E631E41FDD10045E657 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E40E621E41FDD10045E657 /* DetailViewController.swift */; };
+		64E40E651E4251770045E657 /* UserDefaultsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E40E641E4251770045E657 /* UserDefaultsApi.swift */; };
+		64E40E6A1E439A290045E657 /* FavoriteBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E40E691E439A290045E657 /* FavoriteBarButtonItem.swift */; };
 		7072FC5268EA2141C31B71C6 /* Pods_Ostmodern_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86EF480DC4C9125292C2AB69 /* Pods_Ostmodern_API.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,9 +56,16 @@
 		642B28AF1E4096C0005C800E /* Ostmodern_APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ostmodern_APITests.swift; sourceTree = "<group>"; };
 		642B28B11E4096C0005C800E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		642BC3A01E409D51004269A1 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
-		642BC3A21E40A379004269A1 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		642BC3A21E40A379004269A1 /* RequestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestApi.swift; sourceTree = "<group>"; };
+		64D4DBF21E447DED0098B9A7 /* BarButtonImageDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarButtonImageDelegate.swift; sourceTree = "<group>"; };
 		64E40E581E40EF6A0045E657 /* CellImageDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellImageDelegate.swift; sourceTree = "<group>"; };
 		64E40E5A1E40F70C0045E657 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		64E40E5C1E41E04A0045E657 /* DatabaseApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseApi.swift; sourceTree = "<group>"; };
+		64E40E5E1E41ECA60045E657 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		64E40E601E41ECB00045E657 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		64E40E621E41FDD10045E657 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		64E40E641E4251770045E657 /* UserDefaultsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsApi.swift; sourceTree = "<group>"; };
+		64E40E691E439A290045E657 /* FavoriteBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteBarButtonItem.swift; sourceTree = "<group>"; };
 		86EF480DC4C9125292C2AB69 /* Pods_Ostmodern_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ostmodern_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCE453639C4554A1220FB54 /* Pods-Ostmodern API.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostmodern API.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ostmodern API/Pods-Ostmodern API.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,17 +124,11 @@
 		642B28961E4096C0005C800E /* Ostmodern API */ = {
 			isa = PBXGroup;
 			children = (
-				642B28971E4096C0005C800E /* AppDelegate.swift */,
-				642B28991E4096C0005C800E /* HomeViewController.swift */,
-				64E40E581E40EF6A0045E657 /* CellImageDelegate.swift */,
-				642BC3A01E409D51004269A1 /* Episode.swift */,
-				642BC3A21E40A379004269A1 /* ApiRequest.swift */,
-				642B289B1E4096C0005C800E /* Main.storyboard */,
-				642B28A11E4096C0005C800E /* Assets.xcassets */,
-				642B28A31E4096C0005C800E /* LaunchScreen.storyboard */,
-				642B28A61E4096C0005C800E /* Info.plist */,
-				642B289E1E4096C0005C800E /* Ostmodern_API.xcdatamodeld */,
-				64E40E5A1E40F70C0045E657 /* EpisodeTableViewCell.swift */,
+				64E40E6B1E439A990045E657 /* Core */,
+				64E40E661E4399F70045E657 /* Model */,
+				64E40E671E4399FF0045E657 /* View */,
+				64E40E681E439A0C0045E657 /* Controller */,
+				64E40E6C1E439AC80045E657 /* Utilities */,
 			);
 			path = "Ostmodern API";
 			sourceTree = "<group>";
@@ -132,6 +140,59 @@
 				642B28B11E4096C0005C800E /* Info.plist */,
 			);
 			path = "Ostmodern APITests";
+			sourceTree = "<group>";
+		};
+		64E40E661E4399F70045E657 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				642BC3A01E409D51004269A1 /* Episode.swift */,
+				64E40E581E40EF6A0045E657 /* CellImageDelegate.swift */,
+				642BC3A21E40A379004269A1 /* RequestApi.swift */,
+				64E40E5C1E41E04A0045E657 /* DatabaseApi.swift */,
+				64E40E641E4251770045E657 /* UserDefaultsApi.swift */,
+				64D4DBF21E447DED0098B9A7 /* BarButtonImageDelegate.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		64E40E671E4399FF0045E657 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64E40E5A1E40F70C0045E657 /* EpisodeTableViewCell.swift */,
+				64E40E691E439A290045E657 /* FavoriteBarButtonItem.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		64E40E681E439A0C0045E657 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				642B28991E4096C0005C800E /* HomeViewController.swift */,
+				64E40E621E41FDD10045E657 /* DetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		64E40E6B1E439A990045E657 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				642B28971E4096C0005C800E /* AppDelegate.swift */,
+				642B289B1E4096C0005C800E /* Main.storyboard */,
+				642B28A11E4096C0005C800E /* Assets.xcassets */,
+				642B28A31E4096C0005C800E /* LaunchScreen.storyboard */,
+				642B28A61E4096C0005C800E /* Info.plist */,
+				642B289E1E4096C0005C800E /* Ostmodern_API.xcdatamodeld */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		64E40E6C1E439AC80045E657 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				64E40E5E1E41ECA60045E657 /* Reachability.swift */,
+				64E40E601E41ECB00045E657 /* Alert.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		A0AC1E509129BC4946F150B1 /* Frameworks */ = {
@@ -347,12 +408,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E40E631E41FDD10045E657 /* DetailViewController.swift in Sources */,
+				64E40E651E4251770045E657 /* UserDefaultsApi.swift in Sources */,
+				64D4DBF31E447DED0098B9A7 /* BarButtonImageDelegate.swift in Sources */,
 				642B289A1E4096C0005C800E /* HomeViewController.swift in Sources */,
 				64E40E5B1E40F70C0045E657 /* EpisodeTableViewCell.swift in Sources */,
+				64E40E6A1E439A290045E657 /* FavoriteBarButtonItem.swift in Sources */,
 				642BC3A11E409D51004269A1 /* Episode.swift in Sources */,
-				642BC3A31E40A379004269A1 /* ApiRequest.swift in Sources */,
+				64E40E5D1E41E04A0045E657 /* DatabaseApi.swift in Sources */,
+				642BC3A31E40A379004269A1 /* RequestApi.swift in Sources */,
+				64E40E5F1E41ECA60045E657 /* Reachability.swift in Sources */,
 				64E40E591E40EF6A0045E657 /* CellImageDelegate.swift in Sources */,
 				642B28981E4096C0005C800E /* AppDelegate.swift in Sources */,
+				64E40E611E41ECB00045E657 /* Alert.swift in Sources */,
 				642B28A01E4096C0005C800E /* Ostmodern_API.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

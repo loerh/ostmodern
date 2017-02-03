@@ -8,30 +8,69 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CellImageDelegate {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EpisodeFavoriteDelegate {
     
     private lazy var episodes = [Episode]()
+    private lazy var requestApi = RequestApi()
+    private lazy var userDefaultsApi = UserDefaultsApi()
+    private lazy var dbApi = DatabaseApi(delegate: UIApplication.shared.delegate as! AppDelegate)
+    private var selectedRow : Int!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loaderView: UIView!
     
     @IBOutlet weak var epTableView: UITableView! {
         didSet {
-            let request = ApiRequest()
-            request.taskUrl = ApiRequest.ApiRequestConstants.HomeSetUrl
-            request.cellImageDelegate = self
-            request.fetch() { result in
+            
+            self.fetchFromCoreData {
+                self.epTableView.reloadData()
+            }
+            self.willFetchFromNetwork()
+        }
+    }
+    
+    //MARK: OTHER FUNCTIONS
+    
+    private func willFetchFromNetwork() {
+        if (Reachability.isConnectedToNetwork()) {
+            self.requestApi.taskUrl = RequestApi.ApiRequestConstants.homeSetUrl
+            self.requestApi.fetch() { result in
                 self.episodes = result
                 self.epTableView.reloadData()
+                self.saveToCoreData()
+                self.loaderView.isHidden = true
                 self.activityIndicator.stopAnimating()
-                
-                Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false, block: { (timer) in
-                    print("firing timer!")
-                    self.episodes.append(Episode(title: "Test ep", synopsis: "test syn"))
-                    self.epTableView.beginUpdates()
-                    self.epTableView.insertRows(at: [IndexPath(row: self.episodes.count-1, section: 0)], with: .automatic)
-                    self.epTableView.endUpdates()
-                })
             }
+        } else {
+            Alert.networkDidFailToConnect(viewController: self)
+            self.loaderView.isHidden = true
+            self.activityIndicator.stopAnimating()
+        }
+
+    }
+    
+    private func fetchFromCoreData(_ completion : () -> Void) {
+        self.episodes.removeAll()
+        let data = self.dbApi.fetchEntries()
+        for entry in data {
+            self.episodes.append(Episode(entry: entry))
+        }
+        self.episodes.sort {$0.getTitle() < $1.getTitle()}
+        completion()
+    }
+    
+    private func saveToCoreData() {
+        self.dbApi.deleteAllEntries()
+        for episode in self.episodes {
+            self.dbApi.saveEntry(episode: episode)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "episodeDetail" {
+            let destination = segue.destination as! DetailViewController
+            destination.passedEpisode = self.episodes[self.selectedRow]
+            destination.favoriteDelegate = self
         }
     }
     
@@ -39,8 +78,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? EpisodeTableViewCell {
-            cell.epTitleLabel.text = self.episodes[indexPath.row].getTitle()
-            cell.epSynopsisLabel.text = self.episodes[indexPath.row].getSynopsis()
+            let episode = self.episodes[indexPath.row]
+            cell.id = episode.getId()
+            cell.epTitleLabel.text = episode.getTitle()
+            cell.epSynopsisLabel.text = episode.getSynopsis()
+            if let imageData = self.episodes[indexPath.row].getImageData() {
+                    cell.epImageView.image = UIImage(data: imageData)
+            } else {
+                cell.epImageView.image = UIImage(named: "no-image")
+            }
+            if self.userDefaultsApi.getFavorites().contains(episode.getId()) {
+                cell.favImageView.image = UIImage(named: "favicon-enabled")
+                cell.favorite = true
+            } else {
+                cell.favImageView.image = UIImage(named: "favicon-disabled")
+            }
             return cell
         } else {
             return UITableViewCell()
@@ -51,21 +103,24 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return self.episodes.count
     }
     
-    //MARK: NEW CELL DELEGATE
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedRow = indexPath.row
+        self.performSegue(withIdentifier: "episodeDetail", sender: self)
+    }
     
-    func didLoadCellImage(row: Int, episode: Episode) {
-        let cell = self.epTableView.cellForRow(at: IndexPath(row: row, section: 0)) as? EpisodeTableViewCell
-        
-                let url = episode.getImageUrl()
-            URLSession.shared.dataTask(with: URL(string: url!)!, completionHandler: { (data, response, error) in
-                if (data != nil) {
-                    DispatchQueue.main.async {
-                        cell?.epImageView.image = UIImage(data: data!)
-                        self.epTableView.reloadData()
-                    }
-                }
-            }).resume()
-        
+    @IBAction func updateFavorite(_ sender: UIControl) {
+        if let cell = sender.superview?.superview as? EpisodeTableViewCell,
+            let indexPath = self.epTableView.indexPath(for: cell) {
+            cell.updateFavIcon()
+            self.userDefaultsApi.updateFavorite(uniqueId: self.episodes[indexPath.row].getId())
+        }
+    }
+    
+    
+    //MARK: FAVORITE DELEGATE
+    
+    func didUpdateFavorite() {
+        self.epTableView.reloadData()
     }
 }
 

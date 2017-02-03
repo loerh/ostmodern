@@ -16,10 +16,16 @@ class EpisodeTableViewCell: UITableViewCell {
     @IBOutlet weak var epTitleLabel: UILabel!
     @IBOutlet weak var epSynopsisLabel: UILabel!
     
+    var id : String?
+    
+    var favorite = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.favImageView.image = UIImage(named: "favicon-disabled")
         self.epImageView.image = UIImage(named: "no-image")
+        self.epImageView.layer.cornerRadius = 5
+        self.epImageView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,7 +34,15 @@ class EpisodeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBAction func updateFavorite() {
-        
+    
+    func updateFavIcon() {
+        self.favorite = !self.favorite
+        if self.favorite {
+            self.favImageView.image = UIImage(named: "favicon-enabled")
+        } else {
+            self.favImageView.image = UIImage(named: "favicon-disabled")
+        }
     }
+    
+    
 }
